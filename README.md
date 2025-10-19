@@ -1,6 +1,6 @@
 # patches
 
-This repository contains patches used on ROM builds for LG7n, LG8n and LH7n
+This repository contains patches used on ROM builds for LG7n, LG8n and LH7n pulled by vendorsetup.sh so I don't have to keep updating the commit hashes in vendorsetup
 ---
 
 # Patches list
