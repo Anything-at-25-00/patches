@@ -1,0 +1,29 @@
+From 8d447df80878aab50e05f3b66af92e47aa0ed4f3 Mon Sep 17 00:00:00 2001
+From: rmp22 <195054967+rmp22@users.noreply.github.com>
+Date: Tue, 9 Sep 2025 19:37:09 +0000
+Subject: [PATCH] [PATCH] add PERF_ANIM_OVERRIDE flag
+
+Change-Id: I7d264207abef968739b57c9fce19e8f65466ee8c
+Signed-off-by: Shirayuki39 <lorddemecrius83@proton.me>
+---
+ config/version.mk | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+diff --git a/config/version.mk b/config/version.mk
+index b90efe7..671c0de 100644
+--- a/config/version.mk
++++ b/config/version.mk
+@@ -20,6 +20,10 @@ YAAP_BUILDTYPE ?= HOMEMADE
+ YAAP_BUILD_VERSION := $(PLATFORM_VERSION)
+ YAAP_VERSION := $(YAAP_BUILD_VERSION)-$(YAAP_BUILDTYPE)-$(TARGET_PRODUCT_SHORT)-$(BUILD_DATE)
+ ROM_FINGERPRINT := YAAP/$(PLATFORM_VERSION)/$(TARGET_PRODUCT_SHORT)/$(shell date -u +%H%M)
++PERF_ANIM_OVERRIDE ?= false
++
++PRODUCT_PRODUCT_PROPERTIES += \
++  persist.sys.activity_anim_perf_override=$(PERF_ANIM_OVERRIDE)
+ 
+ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+   ro.yaap.build.version=$(YAAP_BUILD_VERSION) \
+-- 
+2.39.5
+
